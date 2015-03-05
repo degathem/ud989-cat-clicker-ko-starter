@@ -4,7 +4,9 @@ var ViewModel = function (){
   this.imgSrc = ko.observable('img/1413379559_412a540d29_z.jpg');
   this.imgAttribution = ko.observable('some guy');
 
-  this.incrementCounter = function () {}
+  this.incrementCounter = function () {
+    this.clickCount(this.clickCount() + 1);
+  }
 }
 
 ko.applyBindings(new ViewModel());
